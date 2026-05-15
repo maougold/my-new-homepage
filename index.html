@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>私のギャラリー</title>
+    <title>私の写真ギャラリー</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,26 +14,32 @@
         }
         h1 {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             color: #2c3e50;
         }
         .gallery {
             display: grid;
             grid-template-columns: repeat(4, 1fr); /* 横4列 */
-            gap: 12px; /* 画像間の隙間 */
+            gap: 15px;
             max-width: 1200px;
             margin: 0 auto;
         }
-        .gallery img {
-            width: 100%;
+        .gallery a {
+            display: block;
             aspect-ratio: 1 / 1; /* 正方形 */
-            object-fit: cover;   /* 綺麗にトリミング */
+            overflow: hidden;
             border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
             transition: transform 0.3s;
         }
-        .gallery img:hover {
-            transform: scale(1.05); /* マウスオーバーで少し拡大 */
+        .gallery a:hover {
+            transform: scale(1.05);
+        }
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;     /* 正方形にトリミングして綺麗に収める */
+            /* object-fit: contain;  ← トリミングせず全体を表示したい場合はこちらに変更 */
         }
         .container {
             max-width: 1200px;
@@ -41,7 +47,7 @@
         }
         @media (max-width: 768px) {
             .gallery {
-                grid-template-columns: repeat(2, 1fr); /* スマホは2列に自動調整 */
+                grid-template-columns: repeat(2, 1fr); /* スマホは2列 */
             }
         }
     </style>
@@ -51,19 +57,31 @@
         <h1>私の写真ギャラリー</h1>
         
         <div class="gallery">
-            <!-- ここに画像を追加していきます -->
-            <img src="images/photo1.jpg" alt="写真1">
-            <img src="images/photo2.jpg" alt="写真2">
-            <img src="images/photo3.jpg" alt="写真3">
-            <img src="images/photo4.jpg" alt="写真4">
             
-            <!-- 以下にどんどん追加（最大40枚まで） -->
-            <!-- <img src="images/photo5.jpg" alt="写真5"> -->
-            <!-- <img src="images/photo6.jpg" alt="写真6"> -->
+            <!-- 例：1枚目 -->
+            <a href="images/photo1.jpg" target="_blank">
+                <img src="images/photo1.jpg" alt="写真1">
+            </a>
+            
+            <!-- 2枚目以降も同じ形式で追加 -->
+            <a href="images/photo2.jpg" target="_blank">
+                <img src="images/photo2.jpg" alt="写真2">
+            </a>
+            
+            <a href="images/photo3.jpg" target="_blank">
+                <img src="images/photo3.jpg" alt="写真3">
+            </a>
+            
+            <a href="images/photo4.jpg" target="_blank">
+                <img src="images/photo4.jpg" alt="写真4">
+            </a>
+            
+            <!-- 以下にどんどん追加してください（最大40枚程度） -->
+            
         </div>
         
-        <p style="text-align:center; margin-top:40px; color:#666;">
-            合計40枚まで表示可能 • スマホでは2列に自動調整
+        <p style="text-align:center; margin-top:50px; color:#666;">
+            サムネイルをクリックすると大きな画像が別タブで開きます
         </p>
     </div>
 </body>
