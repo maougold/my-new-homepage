@@ -3,86 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>私の写真ギャラリー</title>
+    <title>ポップギャラリー</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial Rounded MT Bold', 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f8f9fa;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
             color: #333;
         }
         h1 {
             text-align: center;
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.3em;
             margin-bottom: 40px;
-            color: #2c3e50;
+            color: #555;
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 横4列 */
-            gap: 15px;
-            max-width: 1200px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         .gallery a {
             display: block;
-            aspect-ratio: 1 / 1; /* 正方形 */
+            aspect-ratio: 1 / 1;
             overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-            transition: transform 0.3s;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
         }
         .gallery a:hover {
-            transform: scale(1.05);
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
         .gallery img {
             width: 100%;
             height: 100%;
-            object-fit: cover;     /* 正方形にトリミングして綺麗に収める */
-            /* object-fit: contain;  ← トリミングせず全体を表示したい場合はこちらに変更 */
+            object-fit: cover;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
+        .info {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.1em;
+            color: #444;
+        }
+
+        /* スマホ対応 */
         @media (max-width: 768px) {
             .gallery {
-                grid-template-columns: repeat(2, 1fr); /* スマホは2列 */
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            h1 {
+                font-size: 2.3em;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>私の写真ギャラリー</h1>
+        <h1>ポップギャラリー 🎨</h1>
+        <p class="subtitle">クリックで大きく見れます！</p>
         
         <div class="gallery">
+            <!-- ここに20枚分の画像を追加 -->
+            <a href="images/photo1.jpg" target="_blank"><img src="images/photo1.jpg" alt="写真1"></a>
+            <a href="images/photo2.jpg" target="_blank"><img src="images/photo2.jpg" alt="写真2"></a>
+            <a href="images/photo3.jpg" target="_blank"><img src="images/photo3.jpg" alt="写真3"></a>
+            <a href="images/photo4.jpg" target="_blank"><img src="images/photo4.jpg" alt="写真4"></a>
             
-            <!-- 例：1枚目 -->
-            <a href="images/photo1.jpg" target="_blank">
-                <img src="images/photo1.jpg" alt="写真1">
-            </a>
+            <a href="images/photo5.jpg" target="_blank"><img src="images/photo5.jpg" alt="写真5"></a>
+            <a href="images/photo6.jpg" target="_blank"><img src="images/photo6.jpg" alt="写真6"></a>
+            <a href="images/photo7.jpg" target="_blank"><img src="images/photo7.jpg" alt="写真7"></a>
+            <a href="images/photo8.jpg" target="_blank"><img src="images/photo8.jpg" alt="写真8"></a>
             
-            <!-- 2枚目以降も同じ形式で追加 -->
-            <a href="images/photo2.jpg" target="_blank">
-                <img src="images/photo2.jpg" alt="写真2">
-            </a>
+            <a href="images/photo9.jpg" target="_blank"><img src="images/photo9.jpg" alt="写真9"></a>
+            <a href="images/photo10.jpg" target="_blank"><img src="images/photo10.jpg" alt="写真10"></a>
+            <a href="images/photo11.jpg" target="_blank"><img src="images/photo11.jpg" alt="写真11"></a>
+            <a href="images/photo12.jpg" target="_blank"><img src="images/photo12.jpg" alt="写真12"></a>
             
-            <a href="images/photo3.jpg" target="_blank">
-                <img src="images/photo3.jpg" alt="写真3">
-            </a>
+            <a href="images/photo13.jpg" target="_blank"><img src="images/photo13.jpg" alt="写真13"></a>
+            <a href="images/photo14.jpg" target="_blank"><img src="images/photo14.jpg" alt="写真14"></a>
+            <a href="images/photo15.jpg" target="_blank"><img src="images/photo15.jpg" alt="写真15"></a>
+            <a href="images/photo16.jpg" target="_blank"><img src="images/photo16.jpg" alt="写真16"></a>
             
-            <a href="images/photo4.jpg" target="_blank">
-                <img src="images/photo4.jpg" alt="写真4">
-            </a>
-            
-            <!-- 以下にどんどん追加してください（最大40枚程度） -->
-            
+            <a href="images/photo17.jpg" target="_blank"><img src="images/photo17.jpg" alt="写真17"></a>
+            <a href="images/photo18.jpg" target="_blank"><img src="images/photo18.jpg" alt="写真18"></a>
+            <a href="images/photo19.jpg" target="_blank"><img src="images/photo19.jpg" alt="写真19"></a>
+            <a href="images/photo20.jpg" target="_blank"><img src="images/photo20.jpg" alt="写真20"></a>
         </div>
         
-        <p style="text-align:center; margin-top:50px; color:#666;">
-            サムネイルをクリックすると大きな画像が別タブで開きます
-        </p>
+        <div class="info">
+            20枚の写真をポップに並べました！<br>
+            もっと追加したい場合は教えてください♪
+        </div>
     </div>
 </body>
 </html>
