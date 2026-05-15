@@ -3,31 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>私の新しいホームページ</title>
+    <title>私のギャラリー</title>
     <style>
         body {
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            text-align: center;
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 40px;
+            padding: 20px;
             background-color: #f8f9fa;
+            color: #333;
         }
-        h1 { color: #333; }
-        img {
-            max-width: 100%;
-            height: auto;
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 横4列 */
+            gap: 12px; /* 画像間の隙間 */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* 正方形 */
+            object-fit: cover;   /* 綺麗にトリミング */
             border-radius: 12px;
-            margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05); /* マウスオーバーで少し拡大 */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr); /* スマホは2列に自動調整 */
+            }
         }
     </style>
 </head>
 <body>
-    <h1>ようこそ！新しいホームページ</h1>
-    <p>これはGitHub Pagesで作った別ページです</p>
-    
-    <!-- ここに画像を入れる -->
-    <img src="images/photo1.jpg" alt="写真1">
-    
+    <div class="container">
+        <h1>私の写真ギャラリー</h1>
+        
+        <div class="gallery">
+            <!-- ここに画像を追加していきます -->
+            <img src="images/photo1.jpg" alt="写真1">
+            <img src="images/photo2.jpg" alt="写真2">
+            <img src="images/photo3.jpg" alt="写真3">
+            <img src="images/photo4.jpg" alt="写真4">
+            
+            <!-- 以下にどんどん追加（最大40枚まで） -->
+            <!-- <img src="images/photo5.jpg" alt="写真5"> -->
+            <!-- <img src="images/photo6.jpg" alt="写真6"> -->
+        </div>
+        
+        <p style="text-align:center; margin-top:40px; color:#666;">
+            合計40枚まで表示可能 • スマホでは2列に自動調整
+        </p>
+    </div>
 </body>
 </html>
