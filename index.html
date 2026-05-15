@@ -3,60 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Photo Collection</title>
+    <title>ポップギャラリー - Page 1</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial Rounded MT Bold', 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 40px 20px;
             background: #0a0a0f;
             color: #eee;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(120, 80, 255, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 80, 180, 0.06) 0%, transparent 50%);
         }
         h1 {
             text-align: center;
             font-size: 2.8em;
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, #ff9af0, #7b9eff);
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #ff9af0, #7b9eff, #a78bff);
             -webkit-background-clip: text;
             color: transparent;
         }
-        .subtitle { text-align: center; color: #888; margin-bottom: 40px; }
-        
+        .page-info {
+            text-align: center;
+            font-size: 1.35em;
+            margin-bottom: 50px;
+            color: #9999ff;
+        }
         .masonry {
             column-count: 4;
-            column-gap: 18px;
+            column-gap: 20px;
             max-width: 1400px;
             margin: 0 auto;
         }
         .masonry-item {
             break-inside: avoid;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.25s ease;
         }
         .masonry-item:hover {
-            transform: scale(1.03);
-            box-shadow: 0 15px 30px rgba(255,154,240,0.3);
+            box-shadow: 0 10px 25px rgba(255, 50, 80, 0.4);
+            outline: 4px solid #ff3366; /* 赤い縁取り */
         }
         .masonry-item img {
             width: 100%;
             display: block;
         }
-        
-        @media (max-width: 900px) { .masonry { column-count: 2; } }
-        @media (max-width: 600px) { .masonry { column-count: 1; } }
+        .nav {
+            text-align: center;
+            margin: 70px 0 30px;
+        }
+        .nav a {
+            color: #a78bff;
+            font-size: 1.25em;
+            margin: 0 20px;
+            text-decoration: none;
+        }
+        .nav a:hover {
+            color: #ff80bf;
+        }
+
+        /* スマホ対応 */
+        @media (max-width: 900px) {
+            .masonry { column-count: 2; }
+        }
+        @media (max-width: 600px) {
+            .masonry { column-count: 1; }
+        }
     </style>
 </head>
 <body>
-    <h1>My Photo Collection</h1>
-    <p class="subtitle">Pinterestスタイル</p>
+    <h1>ポップギャラリー</h1>
+    <div class="page-info">Page 1 / 20枚</div>
     
     <div class="masonry">
-        <div class="masonry-item"><a href="images/photo1.jpg" target="_blank"><img src="images/photo1.jpg" alt=""></a></div>
-        <div class="masonry-item"><a href="images/photo2.jpg" target="_blank"><img src="images/photo2.jpg" alt=""></a></div>
-        <!-- 好きなだけ追加（高さがバラバラでも綺麗に並ぶ） -->
+        <div class="masonry-item">
+            <a href="images/photo1.jpg" target="_blank"><img src="images/photo1.jpg" alt="写真1"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo2.jpg" target="_blank"><img src="images/photo2.jpg" alt="写真2"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo3.jpg" target="_blank"><img src="images/photo3.jpg" alt="写真3"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo4.jpg" target="_blank"><img src="images/photo4.jpg" alt="写真4"></a>
+        </div>
+        
+        <div class="masonry-item">
+            <a href="images/photo5.jpg" target="_blank"><img src="images/photo5.jpg" alt="写真5"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo6.jpg" target="_blank"><img src="images/photo6.jpg" alt="写真6"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo7.jpg" target="_blank"><img src="images/photo7.jpg" alt="写真7"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo8.jpg" target="_blank"><img src="images/photo8.jpg" alt="写真8"></a>
+        </div>
+        
+        <div class="masonry-item">
+            <a href="images/photo9.jpg" target="_blank"><img src="images/photo9.jpg" alt="写真9"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo10.jpg" target="_blank"><img src="images/photo10.jpg" alt="写真10"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo11.jpg" target="_blank"><img src="images/photo11.jpg" alt="写真11"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo12.jpg" target="_blank"><img src="images/photo12.jpg" alt="写真12"></a>
+        </div>
+        
+        <div class="masonry-item">
+            <a href="images/photo13.jpg" target="_blank"><img src="images/photo13.jpg" alt="写真13"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo14.jpg" target="_blank"><img src="images/photo14.jpg" alt="写真14"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo15.jpg" target="_blank"><img src="images/photo15.jpg" alt="写真15"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo16.jpg" target="_blank"><img src="images/photo16.jpg" alt="写真16"></a>
+        </div>
+        
+        <div class="masonry-item">
+            <a href="images/photo17.jpg" target="_blank"><img src="images/photo17.jpg" alt="写真17"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo18.jpg" target="_blank"><img src="images/photo18.jpg" alt="写真18"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo19.jpg" target="_blank"><img src="images/photo19.jpg" alt="写真19"></a>
+        </div>
+        <div class="masonry-item">
+            <a href="images/photo20.jpg" target="_blank"><img src="images/photo20.jpg" alt="写真20"></a>
+        </div>
+    </div>
+
+    <div class="nav">
+        <a href="index.html">Page 1</a> | 
+        <a href="gallery2.html">Page 2 →</a>
     </div>
 </body>
 </html>
